@@ -26,7 +26,7 @@ export default function About() {
               <p className="text-gray-600 mb-4">
                 Our journey began with a simple belief: that jewelry should be more than 
                 just an accessory. It should be a reflection of your personality, a 
-                celebration of life's precious moments, and a testament to the beauty 
+                celebration of life&apos;s precious moments, and a testament to the beauty 
                 that surrounds us.
               </p>
               <p className="text-gray-600">
@@ -90,7 +90,7 @@ export default function About() {
           <div className="bg-gray-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              To create exceptional jewelry that celebrates life's most precious moments, 
+              To create exceptional jewelry that celebrates life&apos;s most precious moments, 
               combining traditional craftsmanship with contemporary design to deliver 
               pieces that are both timeless and uniquely personal.
             </p>
