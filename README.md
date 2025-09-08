@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nasisi Jewelry - Handcrafted Jewelry Showcase
 
-## Getting Started
+A beautiful, modern jewelry showcase website built with Next.js, Tailwind CSS, and Supabase.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🏠 **Home Page**: Hero section with smooth scrolling to product grid
+- 💎 **Product Showcase**: Responsive grid displaying jewelry from Supabase database
+- 📖 **About Page**: Brand story and company values
+- 📞 **Contact Page**: Contact form with Supabase integration + social media links
+- 📱 **Responsive Design**: Mobile-first design that works on all devices
+- ⚡ **Modern Stack**: Next.js 15, Tailwind CSS 4, TypeScript, Supabase
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS 4
+- **Database**: Supabase
+- **Icons**: Lucide React
+- **Language**: TypeScript
+- **Deployment**: Vercel-ready
+
+## Quick Start
+
+1. **Clone and install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment variables:**
+   Create a `.env.local` file with your Supabase credentials:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+3. **Set up your Supabase database:**
+   See [SETUP.md](./SETUP.md) for detailed database setup instructions.
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open [http://localhost:3000](http://localhost:3000)**
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app router pages
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   ├── layout.tsx         # Root layout with navbar/footer
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── ContactForm.tsx    # Contact form with Supabase integration
+│   ├── Footer.tsx         # Site footer with social links
+│   ├── HeroSection.tsx    # Hero section with smooth scroll
+│   ├── Navbar.tsx         # Responsive navigation
+│   └── ProductCard.tsx    # Product display card
+├── lib/
+│   └── supabaseClient.ts  # Supabase configuration
+└── types/
+    └── database.ts        # TypeScript database types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Database Schema
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **products**: Store jewelry items (id, name, description, image_url, category)
+- **contact_messages**: Store contact form submissions (id, name, email, message)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization
 
-## Learn More
+- Update social media links in `components/Footer.tsx` and `src/app/contact/page.tsx`
+- Modify brand colors and styling in `src/app/globals.css`
+- Add your jewelry images and update product data in Supabase
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ready to deploy on Vercel:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push to GitHub
+2. Connect to Vercel
+3. Add environment variables
+4. Deploy!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For detailed setup instructions, see [SETUP.md](./SETUP.md).
