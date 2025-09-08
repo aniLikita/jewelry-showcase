@@ -6,9 +6,18 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  // Generate random height for masonry effect
+  // Generate consistent height based on product ID for masonry effect
   const heights = ['h-64', 'h-72', 'h-80', 'h-96', 'h-[22rem]', 'h-[26rem]']
-  const randomHeight = heights[Math.floor(Math.random() * heights.length)]
+  const hashCode = (str: string) => {
+    let hash = 0
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i)
+      hash = ((hash << 5) - hash) + char
+      hash = hash & hash // Convert to 32bit integer
+    }
+    return Math.abs(hash)
+  }
+  const randomHeight = heights[hashCode(product.id) % heights.length]
 
   return (
     <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
