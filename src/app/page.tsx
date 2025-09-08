@@ -1,6 +1,6 @@
 import { supabase } from '@/lib/supabaseClient'
 import { Product } from '@/types/database'
-import MasonryGrid from '@/src/components/MasonryGrid'
+import MasonryGrid from '@/components/MasonryGrid'
 import HeroSection from '@/components/HeroSection'
 
 async function getProducts(): Promise<Product[]> {
