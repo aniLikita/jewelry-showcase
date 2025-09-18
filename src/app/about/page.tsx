@@ -18,21 +18,20 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Founded with a passion for creating exceptional jewelry, Nasisi represents 
-                the perfect blend of traditional craftsmanship and contemporary design. 
-                Each piece in our collection tells a story of dedication, artistry, and 
-                attention to detail.
+                From a young age, I fell in love with jewelry. I never felt complete without 
+                wearing a piece, it became part of who I am. This passion inspired me to start 
+                this brand, not only out of love for jewelry but also to continue my late mother’s legacy. 
+                She sold elegant, unique pieces, and I’m proud to build on that foundation.
               </p>
               <p className="text-gray-600 mb-4">
-                Our journey began with a simple belief: that jewelry should be more than 
-                just an accessory. It should be a reflection of your personality, a 
-                celebration of life&apos;s precious moments, and a testament to the beauty 
-                that surrounds us.
+                Our journey began with the belief that jewelry should make you feel bold and confident, 
+                not just as an accessory, but as a reflection of your personality, your moments, and the beauty 
+                that surrounds you. Today, we continue to carry out this vision by offering pieces that are not 
+                only beautiful but meaningful, ensuring each customer finds something truly special.
               </p>
               <p className="text-gray-600">
-                Today, we continue to honor this vision by creating pieces that are not 
-                only beautiful but also meaningful, ensuring that each customer finds 
-                something truly special.
+                Today, Nasisi Jewelry represents the perfect blend of texture, artistry, and quality design. 
+                Every piece in our collection tells a story.
               </p>
             </div>
             <div className="bg-gray-100 rounded-lg p-8 text-center">
@@ -41,8 +40,8 @@ export default function About() {
                 Handcrafted Excellence
               </h3>
               <p className="text-gray-600">
-                Every piece is meticulously crafted by skilled artisans using 
-                traditional techniques and the finest materials.
+                Each piece is uniquely designed and carefully handcrafted by skilled artisans using 
+                refined techniques, ensuring artistry and elegance in every detail
               </p>
             </div>
           </div>
@@ -69,8 +68,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Artistry</h3>
                 <p className="text-gray-600">
-                  Each design is a work of art, carefully conceived and expertly 
-                  executed by our talented craftspeople.
+                  Each design is a work of art, thoughtfully created with care.
                 </p>
               </div>
               <div className="text-center">
@@ -79,8 +77,8 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Passion</h3>
                 <p className="text-gray-600">
-                  Our love for jewelry making drives us to create pieces that bring 
-                  joy and beauty to your life.
+                  Our love for jewelry inspires us to craft pieces that bring joy, beauty, and
+                  confidence to your life.
                 </p>
               </div>
             </div>
@@ -90,9 +88,10 @@ export default function About() {
           <div className="bg-gray-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              To create exceptional jewelry that celebrates life&apos;s most precious moments, 
-              combining traditional craftsmanship with contemporary design to deliver 
-              pieces that are both timeless and uniquely personal.
+              To create and offer exceptional jewelry that 
+              celebrates life’s most precious moments. 
+              We combine fine craftsmanship with contemporary design 
+              to deliver pieces that are timeless and uniquely personal.
             </p>
           </div>
         </div>

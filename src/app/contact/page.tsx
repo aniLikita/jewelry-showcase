@@ -33,7 +33,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">info@nasisijewelry.com</p>
+                  <p className="text-gray-600">nasisiadamu@gmail.com</p>
                 </div>
               </div>
               
@@ -53,7 +53,7 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow us</h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com/nasisi_jewelry"
+                  href="https://instagram.com/nasisi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-md hover:shadow-lg"
@@ -63,7 +63,7 @@ export default function Contact() {
                 </a>
                 
                 <a
-                  href="https://wa.me/2348121242423"
+                  href="https://wa.me/08121242423"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 shadow-md hover:shadow-lg"
