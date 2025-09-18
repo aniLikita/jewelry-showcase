@@ -9,22 +9,32 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative h-screen bg-gradient-to-br from-rose-50 via-white to-pink-50 overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-rose-300 rounded-full blur-3xl"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 bg-pink-300 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-40 left-1/3 w-40 h-40 bg-rose-200 rounded-full blur-3xl"></div>
+    <section className="relative h-screen overflow-hidden">
+      {/* Background image with overlay and blur */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0" 
+          style={{
+            backgroundImage: 'url(/background.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '100%',
+            filter: 'blur(1px)'
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-white">
         {/* Main content */}
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-gray-900 mb-6 tracking-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight">
             Discover
-            <span className="block font-serif italic text-rose-600">Beautiful Jewelry</span>
+            <span className="block font-serif italic text-rose-100">Beautiful Jewelry</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-white/90 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
             Curated collection of handcrafted pieces that tell your story
           </p>
 

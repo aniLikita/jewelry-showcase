@@ -1,38 +1,45 @@
-import Image from 'next/image'
-import { Product } from '@/types/database'
+import Image from 'next/image';
+import { Product } from '@/types/database';
+import { getOptimizedImageUrl } from '@/lib/image-utils';
 
 interface ProductCardProps {
-  product: Product
+  product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
   // Generate consistent height based on product ID for masonry effect
-  const heights = ['h-64', 'h-72', 'h-80', 'h-96', 'h-[22rem]', 'h-[26rem]']
+  const heights = ['h-64', 'h-72', 'h-80', 'h-96', 'h-[22rem]', 'h-[26rem]'];
   const hashCode = (str: string) => {
-    let hash = 0
+    let hash = 0;
     for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i)
-      hash = ((hash << 5) - hash) + char
-      hash = hash & hash // Convert to 32bit integer
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
     }
-    return Math.abs(hash)
-  }
-  const randomHeight = heights[hashCode(product.id) % heights.length]
+    return Math.abs(hash);
+  };
+  const randomHeight = heights[hashCode(product.id) % heights.length];
+  
+  // Get optimized image URL for different device sizes
+  const imageUrl = getOptimizedImageUrl(product.image_url, 800, 1000);
 
   return (
     <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
       {/* Image container with dynamic height */}
       <div className={`relative ${randomHeight} overflow-hidden`}>
         <Image
-          src={product.image_url}
+          src={imageUrl}
           alt={product.name}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          priority={false}
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjFmMSIvPjwvc3ZnPg=="
         />
         
         {/* Gentle overlay on hover */}
-        <div className="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
         
         {/* Category tag */}
         {product.category && (
