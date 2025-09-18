@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex space-x-6">
             <a
-              href="https://instagram.com/nasisi_jewelry"
+              href="https://instagram.com/nasisi"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors"
@@ -23,7 +23,7 @@ export default function Footer() {
               <span className="text-sm">Instagram</span>
             </a>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/08121242423"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-600 hover:text-green-600 transition-colors"
